@@ -1,0 +1,502 @@
+smartedge-open@ubuntu-26826412a1:~$ kubectl describe nses -A
+
+Name:         forwarder-vpp-9dgff
+Namespace:    nsm-system
+Labels:       <none>
+Annotations:  <none>
+API Version:  networkservicemesh.io/v1
+Kind:         NetworkServiceEndpoint
+Metadata:
+  Creation Timestamp:  2022-07-12T13:46:53Z
+  Generation:          3810
+  Managed Fields:
+    API Version:  networkservicemesh.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        .:
+        f:expiration_time:
+          .:
+          f:nanos:
+          f:seconds:
+        f:initial_registration_time:
+          .:
+          f:nanos:
+          f:seconds:
+        f:name:
+        f:network_service_labels:
+          .:
+          f:forwarder:
+            .:
+            f:labels:
+              .:
+              f:nodeName:
+              f:p2p:
+        f:network_service_names:
+        f:url:
+    Manager:         cmd-registry-k8s
+    Operation:       Update
+    Time:            2022-07-12T13:46:53Z
+  Resource Version:  1549786
+  UID:               4306df66-7a35-4166-a2f4-d83d4251d74d
+Spec:
+  expiration_time:
+    Nanos:    515729939
+    Seconds:  1657784678
+  initial_registration_time:
+    Nanos:    191446368
+    Seconds:  1657633613
+  Name:       forwarder-vpp-9dgff
+  network_service_labels:
+    Forwarder:
+      Labels:
+        Node Name:  ubuntu-26826412a1
+        p2p:        true
+  network_service_names:
+    forwarder
+  URL:   tcp://10.245.81.180:5001
+Events:  <none>
+
+
+Name:         iperfpod-e-86cc5978b-9zszm
+Namespace:    nsm-system
+Labels:       <none>
+Annotations:  <none>
+API Version:  networkservicemesh.io/v1
+Kind:         NetworkServiceEndpoint
+Metadata:
+  Creation Timestamp:  2022-07-13T13:47:42Z
+  Generation:          1628
+  Managed Fields:
+    API Version:  networkservicemesh.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        .:
+        f:expiration_time:
+          .:
+          f:nanos:
+          f:seconds:
+        f:initial_registration_time:
+          .:
+          f:nanos:
+          f:seconds:
+        f:name:
+        f:network_service_labels:
+          .:
+          f:nsm-iperf:
+            .:
+            f:labels:
+              .:
+              f:app:
+              f:nodeName:
+        f:network_service_names:
+        f:url:
+    Manager:         cmd-registry-k8s
+    Operation:       Update
+    Time:            2022-07-13T13:47:42Z
+  Resource Version:  1549739
+  UID:               3f65e6b6-75ee-4e43-838f-57b6a0e5ed81
+Spec:
+  expiration_time:
+    Nanos:    438518810
+    Seconds:  1657784670
+  initial_registration_time:
+    Nanos:    824594865
+    Seconds:  1657720062
+  Name:       iperfpod-e-86cc5978b-9zszm
+  network_service_labels:
+    Nsm - Iperf:
+      Labels:
+        App:        endpt
+        Node Name:  ubuntu-26826412a1
+  network_service_names:
+    nsm-iperf
+  URL:   tcp://10.245.81.180:5001
+Events:  <none>
+
+
+Name:         nse-firewall-vpp-69d45d98cb-d8chj
+Namespace:    nsm-system
+Labels:       <none>
+Annotations:  <none>
+API Version:  networkservicemesh.io/v1
+Kind:         NetworkServiceEndpoint
+Metadata:
+  Creation Timestamp:  2022-07-13T13:23:18Z
+  Generation:          1664
+  Managed Fields:
+    API Version:  networkservicemesh.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        .:
+        f:expiration_time:
+          .:
+          f:nanos:
+          f:seconds:
+        f:initial_registration_time:
+          .:
+          f:nanos:
+          f:seconds:
+        f:name:
+        f:network_service_labels:
+          .:
+          f:nse-composition:
+            .:
+            f:labels:
+              .:
+              f:app:
+              f:nodeName:
+        f:network_service_names:
+        f:url:
+    Manager:         cmd-registry-k8s
+    Operation:       Update
+    Time:            2022-07-13T13:23:18Z
+  Resource Version:  1549707
+  UID:               d4046833-d917-4a35-9be6-2edf4964229a
+Spec:
+  expiration_time:
+    Nanos:    249543870
+    Seconds:  1657784666
+  initial_registration_time:
+    Nanos:    81059702
+    Seconds:  1657718598
+  Name:       nse-firewall-vpp-69d45d98cb-d8chj
+  network_service_labels:
+    Nse - Composition:
+      Labels:
+        App:        firewall
+        Node Name:  ubuntu-26826412a1
+  network_service_names:
+    nse-composition
+  URL:   tcp://10.245.81.180:5001
+Events:  <none>
+
+
+Name:         nse-kernel-58b44869b5-p28f6
+Namespace:    nsm-system
+Labels:       <none>
+Annotations:  <none>
+API Version:  networkservicemesh.io/v1
+Kind:         NetworkServiceEndpoint
+Metadata:
+  Creation Timestamp:  2022-07-13T13:23:16Z
+  Generation:          1659
+  Managed Fields:
+    API Version:  networkservicemesh.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        .:
+        f:expiration_time:
+          .:
+          f:nanos:
+          f:seconds:
+        f:initial_registration_time:
+          .:
+          f:nanos:
+          f:seconds:
+        f:name:
+        f:network_service_labels:
+          .:
+          f:nse-composition:
+            .:
+            f:labels:
+              .:
+              f:app:
+              f:nodeName:
+        f:network_service_names:
+        f:url:
+    Manager:         cmd-registry-k8s
+    Operation:       Update
+    Time:            2022-07-13T13:23:16Z
+  Resource Version:  1549652
+  UID:               3bf19b94-902c-46c7-b453-7aee7a88f5f2
+Spec:
+  expiration_time:
+    Nanos:    345872561
+    Seconds:  1657784656
+  initial_registration_time:
+    Nanos:    277816509
+    Seconds:  1657718596
+  Name:       nse-kernel-58b44869b5-p28f6
+  network_service_labels:
+    Nse - Composition:
+      Labels:
+        App:        gateway
+        Node Name:  ubuntu-26826412a1
+  network_service_names:
+    nse-composition
+  URL:   tcp://10.245.81.180:5001
+Events:  <none>
+
+
+Name:         nse-passthrough-1-75b4567f89-bbtvr
+Namespace:    nsm-system
+Labels:       <none>
+Annotations:  <none>
+API Version:  networkservicemesh.io/v1
+Kind:         NetworkServiceEndpoint
+Metadata:
+  Creation Timestamp:  2022-07-13T13:23:17Z
+  Generation:          1665
+  Managed Fields:
+    API Version:  networkservicemesh.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        .:
+        f:expiration_time:
+          .:
+          f:nanos:
+          f:seconds:
+        f:initial_registration_time:
+          .:
+          f:nanos:
+          f:seconds:
+        f:name:
+        f:network_service_labels:
+          .:
+          f:nse-composition:
+            .:
+            f:labels:
+              .:
+              f:app:
+              f:nodeName:
+        f:network_service_names:
+        f:url:
+    Manager:         cmd-registry-k8s
+    Operation:       Update
+    Time:            2022-07-13T13:23:17Z
+  Resource Version:  1549843
+  UID:               6f3a4e00-b57a-4810-b1ef-d1334ea7c53c
+Spec:
+  expiration_time:
+    Nanos:    509945404
+    Seconds:  1657784687
+  initial_registration_time:
+    Nanos:    760799706
+    Seconds:  1657718597
+  Name:       nse-passthrough-1-75b4567f89-bbtvr
+  network_service_labels:
+    Nse - Composition:
+      Labels:
+        App:        passthrough-1
+        Node Name:  ubuntu-26826412a1
+  network_service_names:
+    nse-composition
+  URL:   tcp://10.245.81.180:5001
+Events:  <none>
+
+
+Name:         nse-passthrough-2-6f7f797896-tpchk
+Namespace:    nsm-system
+Labels:       <none>
+Annotations:  <none>
+API Version:  networkservicemesh.io/v1
+Kind:         NetworkServiceEndpoint
+Metadata:
+  Creation Timestamp:  2022-07-13T13:23:17Z
+  Generation:          1669
+  Managed Fields:
+    API Version:  networkservicemesh.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        .:
+        f:expiration_time:
+          .:
+          f:nanos:
+          f:seconds:
+        f:initial_registration_time:
+          .:
+          f:nanos:
+          f:seconds:
+        f:name:
+        f:network_service_labels:
+          .:
+          f:nse-composition:
+            .:
+            f:labels:
+              .:
+              f:app:
+              f:nodeName:
+        f:network_service_names:
+        f:url:
+    Manager:         cmd-registry-k8s
+    Operation:       Update
+    Time:            2022-07-13T13:23:17Z
+  Resource Version:  1549659
+  UID:               0b0ae16b-7067-47dc-bab8-5f7be6f1fa66
+Spec:
+  expiration_time:
+    Nanos:    322914407
+    Seconds:  1657784657
+  initial_registration_time:
+    Nanos:    776040333
+    Seconds:  1657718597
+  Name:       nse-passthrough-2-6f7f797896-tpchk
+  network_service_labels:
+    Nse - Composition:
+      Labels:
+        App:        passthrough-2
+        Node Name:  ubuntu-26826412a1
+  network_service_names:
+    nse-composition
+  URL:   tcp://10.245.81.180:5001
+Events:  <none>
+
+
+Name:         nse-passthrough-3-b47895c5f-8cl6s
+Namespace:    nsm-system
+Labels:       <none>
+Annotations:  <none>
+API Version:  networkservicemesh.io/v1
+Kind:         NetworkServiceEndpoint
+Metadata:
+  Creation Timestamp:  2022-07-13T13:23:16Z
+  Generation:          1664
+  Managed Fields:
+    API Version:  networkservicemesh.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:spec:
+        .:
+        f:expiration_time:
+          .:
+          f:nanos:
+          f:seconds:
+        f:initial_registration_time:
+          .:
+          f:nanos:
+          f:seconds:
+        f:name:
+        f:network_service_labels:
+          .:
+          f:nse-composition:
+            .:
+            f:labels:
+              .:
+              f:app:
+              f:nodeName:
+        f:network_service_names:
+        f:url:
+    Manager:         cmd-registry-k8s
+    Operation:       Update
+    Time:            2022-07-13T13:23:16Z
+  Resource Version:  1549791
+  UID:               ffe1d74b-ec8a-4c99-81e6-7c96d1e635cb
+Spec:
+  expiration_time:
+    Nanos:    770089688
+    Seconds:  1657784679
+  initial_registration_time:
+    Nanos:    354160814
+    Seconds:  1657718596
+  Name:       nse-passthrough-3-b47895c5f-8cl6s
+  network_service_labels:
+    Nse - Composition:
+      Labels:
+        App:        passthrough-3
+        Node Name:  ubuntu-26826412a1
+  network_service_names:
+    nse-composition
+  URL:   tcp://10.245.81.180:5001
+Events:  <none>
+smartedge-open@ubuntu-26826412a1:~$ 
+smartedge-open@ubuntu-26826412a1:~$ 
+smartedge-open@ubuntu-26826412a1:~$ kubectl describe netsvc -A
+Name:         nse-composition
+Namespace:    nsm-test
+Labels:       app.kubernetes.io/managed-by=Helm
+Annotations:  meta.helm.sh/release-name: nse-composition
+              meta.helm.sh/release-namespace: nsm-test
+API Version:  networkservicemesh.io/v1
+Kind:         NetworkService
+Metadata:
+  Creation Timestamp:  2022-07-13T13:23:08Z
+  Generation:          1
+  Managed Fields:
+    API Version:  networkservicemesh.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .:
+          f:meta.helm.sh/release-name:
+          f:meta.helm.sh/release-namespace:
+        f:labels:
+          .:
+          f:app.kubernetes.io/managed-by:
+      f:spec:
+        .:
+        f:matches:
+        f:payload:
+    Manager:         helm
+    Operation:       Update
+    Time:            2022-07-13T13:23:08Z
+  Resource Version:  1144295
+  UID:               743c2808-902a-49ff-9234-d2316d096157
+Spec:
+  Matches:
+    Routes:
+      destination_selector:
+        App:  passthrough-1
+    source_selector:
+      App:  firewall
+    Routes:
+      destination_selector:
+        App:  passthrough-2
+    source_selector:
+      App:  passthrough-1
+    Routes:
+      destination_selector:
+        App:  passthrough-3
+    source_selector:
+      App:  passthrough-2
+    Routes:
+      destination_selector:
+        App:  gateway
+    source_selector:
+      App:  passthrough-3
+    Routes:
+      destination_selector:
+        App:  firewall
+  Payload:    ETHERNET
+Events:       <none>
+
+
+Name:         nsm-iperf
+Namespace:    nsm-test
+Labels:       <none>
+Annotations:  <none>
+API Version:  networkservicemesh.io/v1
+Kind:         NetworkService
+Metadata:
+  Creation Timestamp:  2022-07-13T13:47:27Z
+  Generation:          1
+  Managed Fields:
+    API Version:  networkservicemesh.io/v1
+    Fields Type:  FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .:
+          f:kubectl.kubernetes.io/last-applied-configuration:
+      f:spec:
+        .:
+        f:matches:
+        f:payload:
+    Manager:         kubectl-client-side-apply
+    Operation:       Update
+    Time:            2022-07-13T13:47:27Z
+  Resource Version:  1153521
+  UID:               7d203c1b-987f-4a8b-ae0b-a2ca5810ed09
+Spec:
+  Matches:
+    Routes:
+      destination_selector:  app:endpt
+  Payload:                   ETHERNET
+Events:                      <none>
+smartedge-open@ubuntu-26826412a1:~$ 
