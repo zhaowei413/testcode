@@ -1,0 +1,74 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2021 Intel Corporation
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nse-kernel
+  namespace: sdewan-system
+  labels:
+    app: nse-kernel
+spec:
+  selector:
+    matchLabels:
+      app: nse-kernel
+  template:
+    metadata:
+      labels:
+        app: nse-kernel
+        "spiffe.io/spiffe-id": "true"
+    spec:
+      containers:
+        - name: nse
+          image: ghcr.io/networkservicemesh/cmd-nse-icmp-responder:v1.2.0
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: NSM_CIDR_PREFIX
+              value: 172.16.1.100/28
+            - name: NSM_SERVICE_NAMES
+              value: "nse-composition"
+            - name: NSM_REGISTER_SERVICE
+              value: "false"
+            - name: NSM_LABELS
+              value: "app:gateway"
+            - name: SPIFFE_ENDPOINT_SOCKET
+              value: unix:///run/spire/sockets/agent.sock
+            - name: NSM_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: NSM_LOG_LEVEL
+              value: TRACE
+            - name: NSM_CONNECT_TO
+              value: unix:///var/lib/networkservicemesh/nsm.io.sock
+          volumeMounts:
+            - name: spire-agent-socket
+              mountPath: /run/spire/sockets
+              readOnly: true
+            - name: nsm-socket
+              mountPath: /var/lib/networkservicemesh
+              readOnly: true
+          resources:
+            requests:
+              cpu: 100m
+              memory: 40Mi
+            limits:
+              memory: 80Mi
+              cpu: 200m
+        - name: nginx
+          image: iperf3:7.9
+          command: [ "sleep", "1000000" ]
+          imagePullPolicy: IfNotPresent
+      #nodeSelector:
+        #kubernetes.io/hostname : ubuntu-26826412a1
+      volumes:
+        - name: spire-agent-socket
+          hostPath:
+            path: /run/spire/sockets
+            type: Directory
+        - name: nsm-socket
+          hostPath:
+            path: /var/lib/networkservicemesh
+            type: DirectoryOrCreate

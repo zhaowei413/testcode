@@ -1,0 +1,23 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2021 Intel Corporation
+
+---
+
+apiVersion: networkservicemesh.io/v1
+kind: NetworkService
+metadata:
+  name: nse-composition
+  namespace: sdewan-system
+spec:
+  payload: ETHERNET
+  matches:
+    - source_selector:
+        app: firewall
+      routes:
+        - destination_selector:
+            app: gateway
+
+    - routes:
+        - destination_selector:
+            app: firewall
+
